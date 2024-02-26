@@ -1,0 +1,76 @@
+body {
+  margin: 0;
+  font-family: tex-gyre-cursor, monospace;
+  background: #101010;
+  color: #fff;
+  --gradient: linear-gradient(90deg, #046A00, #E9B100);
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+* {
+  transition: transform 0.1s ease-in-out;
+}
+
+h1 {
+  background: var(--gradient);
+  width: min-content;
+  background-clip: text;
+  color: transparent;
+  font-size: 4rem;
+  margin-top: 0;
+}
+
+.container {
+  width: 70vw;
+  display: grid;
+  place-items: center;
+}
+
+.socials, h1 {
+  text-align: center;
+}
+
+p {
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+.socials p {
+  color: #cfcfcf;
+  height: 2rem;
+  text-align: center;
+}
+
+.socials svg, .socials img {
+  width: 2rem;
+  height: 2rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.socials svg:hover, .socials img:hover {
+  transform: scale(110%);
+}
+
+@font-face {
+  font-family: tex-gyre-cursor;
+  src: url("font/texgyrecursor-regular.otf");
+}
+
+@media screen and (max-width: 663px) {
+  .container {
+    width: 95vw;
+    margin-bottom: 5rem;
+  }
+  .socials a {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    background: linear-gradient(0deg, #000 60%, transparent);
+  }
+}
